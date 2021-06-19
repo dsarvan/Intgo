@@ -2,17 +2,45 @@ Exercises
 
 1. How are integers stored on a computer?
 
+    The integer types have a definite size. They are uint8, uint16, uint32, uint64, int8,
+    int16, int32, and int64. 8, 16, 32, and 64 tell us how many bits each of the types
+    use.
+
 2. We know that (in base 10) the largest one-digit number is 9 and the largest two-digit
    number is 99. Given that in binary the largest two-digit number is 11 (3), the largest
    three-digit number is 111 (7) and the largest four-digit number is 1111 (15), what's
    the largest eight-digit number? (Hint: 10^1 - 1 = 9 and 10^2 -1 = 99)
 
+    The largest eight-digit number is 11111111 (255)
+
 3. Although overpowered for the task, you can use Go as a calculator. Write a program that
    computes 32,132 x 42,452 and prints it to the terminal (use the * operator for
    multiplication).
 
+   package main
+
+   import "fmt"
+
+   func main() {
+        fmt.Println("32,132 x 42,452 =", 32132*42452)
+   }
+
+
 4. What is a string? How do you find its length?
+
+   A string is a sequence of characters with a definite length used to represent text. Go
+   strings are made up of individual bytes, usually one for each character. 
+
+   To find the length of a string: len("sequence of characters")
 
 5. What's the value of the expression (true && false) || (false && true) || !(false &&
    false)?
 
+   Expression           Value
+   ---------------------------
+   true && false        false
+   false && true        false
+   false && false       false
+   !(false && false)    true
+
+   (true && false) || (false && true) || !(false && false) = false || false || true = true 
