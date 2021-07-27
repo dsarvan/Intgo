@@ -9,6 +9,8 @@ import "fmt"
 
 func main() {
 
+    var name string = "Institute of Mathematical Sciences"
+
     // double quotes
 
     /* finds the length of a string */
@@ -20,8 +22,12 @@ func main() {
     /* [1] gives you the second element, not the first */
     /* 97 instead of 'a', because the character is represented by a byte */
 
+    fmt.Println(name[1])
+
     /* concatenates two strings together */
     fmt.Println("Mathematical " + "Sciences")
+
+    institute := "Institute of Theoretical Physics"
 
     // backticks
     
@@ -33,6 +39,8 @@ func main() {
     /* strings are indexed at 0, not 1 */
     /* [1] gives you the second element, not the first */
     /* 97 instead of 'a', because the character is represented by a byte */
+
+    fmt.Println(institute[1])
 
     /* concatenates two strings together */
     fmt.Println(`Mathematical ` + `Sciences`)
